@@ -34,6 +34,9 @@
     font-size: max(1vw,13px);
     border-radius: 50px;
 }
+.header-contents button:hover{
+    background: beige;
+}
 @media (max-width:1050px) {
     .header{
         height: 38vw;
