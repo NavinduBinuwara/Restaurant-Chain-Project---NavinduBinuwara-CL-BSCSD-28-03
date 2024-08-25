@@ -8,6 +8,7 @@ const StoreContextProvider = (props) => {
     const url = "http://localhost:4000"
     const [food_list, setFoodList] = useState([]);
     const [cartItems, setCartItems] = useState({});
+    const [slides, setSlideItems] = useState([]);
     const [token, setToken] = useState("")
     const currency = "$";
     const deliveryCharge = 5;
@@ -52,6 +53,11 @@ const StoreContextProvider = (props) => {
         setFoodList(response.data.data)
     }
 
+    const fetchSlideList = async () => {
+        const response = await axios.get(url + "/api/offer/list");
+        setSlideItems(response.data.data);
+    }
+
     const loadCartData = async (token) => {
         const response = await axios.post(url + "/api/cart/get", {}, { headers: token });
         setCartItems(response.data.cartData);
@@ -73,6 +79,7 @@ const StoreContextProvider = (props) => {
         food_list,
         menu_list,
         cartItems,
+        slides,
         addToCart,
         removeFromCart,
         getTotalCartAmount,
