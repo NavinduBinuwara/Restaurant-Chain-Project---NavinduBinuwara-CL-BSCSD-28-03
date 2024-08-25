@@ -1,0 +1,22 @@
+
+form{
+    padding:20px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:8px;
+
+}
+input{
+    padding:8px;
+    height:56px;
+    width:300px;
+}
+
+
+textarea{
+    height:400px;
+    width:300px;
+    padding:8px;
+}
