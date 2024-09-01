@@ -1,22 +1,62 @@
-
-form{
-    padding:20px;
-    display: flex ;
+/* Container styling */
+form {
+    padding: 20px;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:8px;
-
+    gap: 16px;
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 400px; /* Constrain width */
+    margin: 0 auto; /* Center the form */
+    margin-bottom: 40px;
 }
-input{
-    padding:8px;
-    height:56px;
-    width:300px;
+
+/* Input and Textarea styling */
+input, textarea {
+    padding: 12px;
+    width: 100%; /* Full width to the container */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded input fields */
+    box-sizing: border-box; /* Ensures padding is inside the box */
+    font-size: 16px;
+    color: #333; /* Darker text color for readability */
+    background-color: #fff; /* White background */
+    transition: border-color 0.3s ease; /* Smooth transition */
 }
 
+input:focus, textarea:focus {
+    border-color: #00aaff; /* Highlight on focus */
+    outline: none; /* Remove default outline */
+}
 
-textarea{
-    height:400px;
-    width:300px;
-    padding:8px;
+/* Textarea specific styling */
+textarea {
+    resize: none; /* Prevent resizing */
+    height: 200px; /* Reduce height for better usability */
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
+    background-color: #00aaff; /* Primary button color */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 8px; /* Rounded button */
+    font-size: 16px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color change */
+}
+
+button:hover {
+    background-color: #008fcc; /* Darker shade on hover */
+}
+
+/* Response message styling */
+.form-txt {
+    font-size: 14px;
+    color: #00aaff;
+    text-align: center;
 }

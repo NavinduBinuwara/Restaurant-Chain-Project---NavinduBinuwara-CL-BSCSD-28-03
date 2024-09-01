@@ -26,7 +26,7 @@ className="mySwiper">
 
 <SwiperSlide key={item._id}>
 <div className="poster">
-   <img src={url+"/images/"+ item.image}alt="image" />
+   <img src={url+"/images/"+ item.image}alt="image" class="offer-img" />
 </div>           
 </SwiperSlide>
 

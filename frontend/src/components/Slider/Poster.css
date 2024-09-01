@@ -1,13 +1,9 @@
 .poster{
-    height: 50dvh;
+    height: 50vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-block: 40px;
 }
 
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}

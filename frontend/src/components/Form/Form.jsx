@@ -93,7 +93,7 @@ const Form = () => {
                 </div>
                 <button type="submit">Submit</button>
             </form>
-            {responseMessage && <p>{responseMessage}</p>}
+            {responseMessage && <p class="form-txt">{responseMessage}</p>}
         </div>
     );
 };
