@@ -7,7 +7,8 @@ const Footer = () => {
     <div className='footer' id='footer'>
       <div className="footer-content">
         <div className="footer-content-left">
-            <img src={assets.logo} alt="" />
+          <h1 className='footer-logo-name'>Binu Restaurant</h1>
+            {/* <img src={assets.logo} alt="" /> */}
             <p>When you dine at Binu Restaurant, you're not just enjoying a meal – you're embarking on a culinary journey. Our carefully curated menu offers something for everyone, from classic dishes that remind you of home to bold new flavors that excite the palate. Whether you're here for a casual lunch, a romantic dinner, or a special celebration, Binu Restaurant is the perfect setting.</p>
             <div className="footer-social-icons">
                 <img src={assets.facebook_icon} alt="" />
