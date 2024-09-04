@@ -1,5 +1,5 @@
 /* Container styling */
-form {
+.user-form {
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@ form {
 }
 
 /* Input and Textarea styling */
-input, textarea {
+input, .user-text-area {
     padding: 12px;
     width: 100%; /* Full width to the container */
     border: 1px solid #ddd; /* Light border */
@@ -27,13 +27,13 @@ input, textarea {
     transition: border-color 0.3s ease; /* Smooth transition */
 }
 
-input:focus, textarea:focus {
+input:focus, .user-text-area:focus {
     border-color: #00aaff; /* Highlight on focus */
     outline: none; /* Remove default outline */
 }
 
 /* Textarea specific styling */
-textarea {
+.user-text-area {
     resize: none; /* Prevent resizing */
     height: 200px; /* Reduce height for better usability */
 }

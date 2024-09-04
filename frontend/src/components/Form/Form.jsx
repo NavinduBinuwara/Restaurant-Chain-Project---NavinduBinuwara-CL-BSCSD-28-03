@@ -50,7 +50,7 @@ const Form = () => {
     return (
         <div>
             <h2>Review</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} class="user-form">
                 <div>
                     <input
                         type="text"
@@ -89,6 +89,7 @@ const Form = () => {
                         onChange={handleChange}
                         placeholder="Your Message"
                         required
+                        class="user-text-area"
                     ></textarea>
                 </div>
                 <button type="submit">Submit</button>
