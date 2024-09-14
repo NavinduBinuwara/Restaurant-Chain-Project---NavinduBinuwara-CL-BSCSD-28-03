@@ -3,6 +3,7 @@ import './Add.css'
 import { assets, url } from '../../assets/assets';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import MakeFoodAvailable from './MakeFoodAvailable'
 
 const Add = () => {
 
@@ -90,6 +91,7 @@ const Add = () => {
                 </div>
                 <button type='submit' className='add-btn' >ADD</button>
             </form>
+            <MakeFoodAvailable/>
         </div>
     )
 }

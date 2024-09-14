@@ -5,6 +5,7 @@ import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
 import AppDownload from '../../components/AppDownload/AppDownload'
 import Slider from '../../components/Slider/Slider'
 import Form from '../../components/Form/Form'
+import FoodFilter from '../../components/FoodFilter/FoodFilter'
 
 const Home = () => {
 
@@ -18,6 +19,7 @@ const Home = () => {
       <Slider/>
       <AppDownload/>
       <Form/>
+      <FoodFilter/>
     </>
   )
 }

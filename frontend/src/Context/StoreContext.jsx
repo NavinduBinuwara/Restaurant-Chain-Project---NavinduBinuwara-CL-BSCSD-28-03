@@ -5,10 +5,11 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
 
-    const url = "http://localhost:4000"
+    const url = "http://localhost:4001"
     const [food_list, setFoodList] = useState([]);
     const [cartItems, setCartItems] = useState({});
     const [slides, setSlideItems] = useState([]);
+    const [restaurants ,setRestaurants]= useState([])
     const [token, setToken] = useState("")
     const currency = "$";
     const deliveryCharge = 5;
@@ -52,6 +53,20 @@ const StoreContextProvider = (props) => {
         const response = await axios.get(url + "/api/food/list");
         setFoodList(response.data.data)
     }
+    const fetchHotelList = async () => {
+        try{
+            const response = await axios.get("http://localhost:4001/api/restaurant/list");
+            setRestaurants(response.data.data)
+            console.log(response,"hotels")
+        }catch(e){
+            console.log(e,"res fecth eror")
+        }
+       
+    }
+    const fetchAvailableFoodList = async () => {
+        const response = await axios.get(url + "/api/food/list");
+        setFoodList(response.data.data)
+    }
 
     const fetchSlideList = async () => {
         const response = await axios.get(url + "/api/offer/list");
@@ -67,6 +82,7 @@ const StoreContextProvider = (props) => {
         async function loadData() {
             await fetchSlideList()
             await fetchFoodList();
+            await fetchHotelList()
             if (localStorage.getItem("token")) {
                 setToken(localStorage.getItem("token"))
                 await loadCartData({ token: localStorage.getItem("token") })
@@ -89,7 +105,8 @@ const StoreContextProvider = (props) => {
         loadCartData,
         setCartItems,
         currency,
-        deliveryCharge
+        deliveryCharge,
+        restaurants
     };
 
     return (

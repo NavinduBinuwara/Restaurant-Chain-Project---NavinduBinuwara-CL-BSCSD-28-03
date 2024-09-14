@@ -33,3 +33,27 @@
     color: white;
     cursor: pointer;
 }
+
+select{
+    display: block;
+}
+
+
+.select{
+
+    display: block;
+    height:40px;
+    width:300px;
+}
+
+
+.checkbox{
+
+    height: 30px;
+    width:30px;
+}
+
+.check-container{
+display: flex;
+gap:5px
+}

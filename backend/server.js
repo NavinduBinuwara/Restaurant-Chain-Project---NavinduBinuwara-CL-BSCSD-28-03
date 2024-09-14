@@ -8,10 +8,11 @@ import 'dotenv/config'
 import cartRouter from "./routes/cartRoute.js"
 import orderRouter from "./routes/orderRoute.js"
 import reviewRouter from "./routes/reviewRouter.js"
+import restaurantRouter from "./routes/restaurantRoute.js"
 
 // app config
 const app = express()
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 4001;
 
 
 // middlewares
@@ -29,6 +30,7 @@ app.use("/images",express.static('uploads'))
 app.use("/api/cart", cartRouter)
 app.use("/api/order",orderRouter)
 app.use("/api/review",reviewRouter)
+app.use("/api/restaurant",restaurantRouter);
 
 app.get("/", (req, res) => {
     res.send("API Working")

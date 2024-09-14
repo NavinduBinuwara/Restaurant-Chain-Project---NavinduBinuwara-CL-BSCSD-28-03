@@ -11,6 +11,8 @@ import Review from './pages/Review/Review'
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Restaurant from './pages/Restaurant/Restaurant '
+
 
 const App = () => {
   return (
@@ -27,6 +29,7 @@ const App = () => {
           <Route path="/offer" element={<Offer />} /> 
           <Route path="/offer-list" element={<OfferList />} /> 
           <Route path="/review" element={<Review />} />
+           <Route path="/restaurant" element={<Restaurant/>} />
         </Routes>
       </div>
     </div>
